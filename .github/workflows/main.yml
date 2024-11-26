@@ -1,0 +1,15 @@
+name: simple-workflow.yml
+
+on: 
+  schedule: 
+      -cron: "0 * * * *"
+  push:
+    branches:
+      - main
+
+jobs:
+
+  run : |
+    echo ": « Récupération du code source »"
+    echo ": « Vérification terminée »"
+    
