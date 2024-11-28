@@ -1,14 +1,14 @@
 name: simple-workflow
 
 on: 
-  [workflow_dispatch]
-on:
+  workflow_dispatch:
   schedule: 
     - cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
+
 jobs:
   simple-job:
     runs-on: ubuntu-latest # Définit l'environnement d'exécution
-   steps:
+    steps:
       - name: Récupération du code source
         run: echo "Récupération du code source"
 
