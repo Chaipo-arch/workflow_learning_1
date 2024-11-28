@@ -7,7 +7,7 @@ on:
     - cron: "30 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
 
 jobs:
-  simple-job:
+  main_job:
     runs-on: ubuntu-latest # Définit l'environnement d'exécution
     steps:
       - name: Récupération du code source
