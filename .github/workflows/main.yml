@@ -15,3 +15,5 @@ jobs:
 
       - name: Vérification terminée
         run: echo "Vérification terminée"
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
