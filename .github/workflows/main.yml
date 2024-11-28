@@ -2,12 +2,9 @@ name: simple-workflow
 
 on: 
   [workflow_dispatch]
+on:
   schedule: 
     - cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
-  push:
-    branches:
-      - main # Exécute également le workflow lorsqu'il y a un push sur la branche main
-
 jobs:
   simple-job:
     runs-on: ubuntu-latest # Définit l'environnement d'exécution
