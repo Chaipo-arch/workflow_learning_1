@@ -1,18 +1,19 @@
- #name: simple-workflow
+name: simple-workflow
 
-#on: 
- # schedule: 
-  #  - cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
-  #push:
-   # branches:
+on: 
+  [workflow_dispatch]
+  schedule: 
+    - cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
+  push:
+    branches:
       - main # Exécute également le workflow lorsqu'il y a un push sur la branche main
 
-#jobs:
-#  simple-job:
-#    runs-on: ubuntu-latest # Définit l'environnement d'exécution
- #   steps:
-  #    - name: Récupération du code source
-   #     run: echo "Récupération du code source"
+jobs:
+  simple-job:
+    runs-on: ubuntu-latest # Définit l'environnement d'exécution
+   steps:
+      - name: Récupération du code source
+        run: echo "Récupération du code source"
 
-    #  - name: Vérification terminée
-     #   run: echo "Vérification terminée"
+      - name: Vérification terminée
+        run: echo "Vérification terminée"
