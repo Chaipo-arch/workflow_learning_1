@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
   schedule: 
-    - cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
+    #- cron: "0 * * * *" # Planifie le workflow pour s'exécuter à chaque début d'heure
 
 jobs:
   main_job:
